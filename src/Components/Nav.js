@@ -1,26 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../CSS/nav.css';
 
 export default function Nav() {
   return (
     <div>
-      <div>
-        <button>
-          <Link to='/Home'>Home</Link>
-        </button>
-      </div>
-      <div>
-        <button>
-          <Link to='/News'>News</Link>
-        </button>
-      </div>
+      <ul className='main_nav_container'>
+        {/* Home Section */}
+        <li>
+          <button>
+            <Link className='navLinks' to='/Home'>
+              Home
+            </Link>
+          </button>
+        </li>
+        {/* End of Home Section */}
+        {/* News Section */}
+        <li>
+          <button>
+            <Link className='navLinks' to='/News'>
+              News
+            </Link>
+          </button>
+        </li>
+        {/* End of News Section */}
 
-      <h1>Nav</h1>
-      <div>
-        <button>
-          <Link to='/YouTube'>YouTube</Link>
-        </button>
-      </div>
+        {/* YouTube Section */}
+        <li>
+          <button>
+            <Link className='navLinks' to='/YouTube'>
+              YouTube
+            </Link>
+          </button>
+        </li>
+        {/* Ending of YouTube Section */}
+      </ul>
     </div>
   );
 }

@@ -1,0 +1,24 @@
+.main_footer_container {
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #dddddd;
+}
+li {
+  display: inline;
+}
+button {
+  color: white;
+  padding: 10px;
+  background-color: rgb(37, 133, 197);
+}
+
+.footerLinks {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}

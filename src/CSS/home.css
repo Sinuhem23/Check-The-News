@@ -1,0 +1,8 @@
+.main_container {
+  display: grid;
+}
+.inner_container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+}

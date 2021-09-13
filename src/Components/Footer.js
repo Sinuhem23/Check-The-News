@@ -1,25 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../CSS/footer.css';
 
 export default function Footer() {
   return (
     <div>
-      <div>
-        <button>
-          <Link to='/Home'>Home</Link>
-        </button>
-      </div>
-      <div>
-        <button>
-          <Link to='./News'>News</Link>
-        </button>
-      </div>
-      <h1>Footer</h1>
-      <div>
-        <button>
-          <Link to='./YouTube'>YouTube</Link>
-        </button>
-      </div>
+      <ul className='main_footer_container'>
+        <li>
+          <button>
+            <a
+              className='footerLinks'
+              href='https://apilist.fun/api/youtube-api'
+            >
+              Youtube Api
+            </a>
+          </button>
+        </li>
+
+        <li>
+          <button>
+            <a className='footerLinks' href='https://developer.nytimes.com/'>
+              News
+            </a>
+          </button>
+        </li>
+      </ul>
     </div>
   );
 }
