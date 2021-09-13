@@ -1,6 +1,11 @@
 import React, { Component, useState, useEffect } from 'react';
 
 function News() {
+  const API_KEY = 'NGDHuyCPqg46TMbprxsAixEYubGjszdw';
+  const API =
+    'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=' +
+    { API_KEY };
+
   let [data, setData] = useState([]);
 
   useEffect(() => {
