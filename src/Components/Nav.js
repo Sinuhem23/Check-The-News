@@ -4,8 +4,8 @@ import '../CSS/nav.css';
 
 export default function Nav() {
   return (
-    <div>
-      <ul className='main_nav_container'>
+    <div className='main_nav_container'>
+      <ul>
         {/* Home Section */}
         <li>
           <button>

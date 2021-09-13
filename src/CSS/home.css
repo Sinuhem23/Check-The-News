@@ -3,6 +3,9 @@
 }
 .inner_container {
   display: grid;
-
+  padding-bottom: 3rem;
   grid-template-columns: 1fr 1fr;
+}
+.search {
+  /* margin-top: 2rem; */
 }

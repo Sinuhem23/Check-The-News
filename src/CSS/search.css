@@ -1,0 +1,12 @@
+.main_input_container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.main_input {
+  display: grid;
+  margin: 3rem 18rem 6rem 18rem;
+  padding: 9px;
+}
+.search_text {
+  margin-top: 6rem;
+}

@@ -1,12 +1,13 @@
 .main_footer_container {
   display: flex;
   justify-content: center;
+  background-color: #e7f9ff;
+  padding: 2rem;
 }
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #dddddd;
 }
 li {
   display: inline;

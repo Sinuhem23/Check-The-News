@@ -4,8 +4,8 @@ import '../CSS/footer.css';
 
 export default function Footer() {
   return (
-    <div>
-      <ul className='main_footer_container'>
+    <div className='main_footer_container'>
+      <ul>
         <li>
           <button>
             <a
@@ -20,7 +20,7 @@ export default function Footer() {
         <li>
           <button>
             <a className='footerLinks' href='https://developer.nytimes.com/'>
-              News
+              New York Times Api
             </a>
           </button>
         </li>

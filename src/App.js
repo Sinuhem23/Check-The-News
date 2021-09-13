@@ -9,10 +9,10 @@ import News from './Components/News';
 function App() {
   return (
     <Router>
-      <Nav />
+      <div className='App'>
+        <Nav />
 
-      <Switch>
-        <div className='App'>
+        <Switch>
           <Route exact path='/'></Route>
 
           <Route path='/home'>
@@ -24,9 +24,10 @@ function App() {
           <Route path='/youtube'>
             <YouTube />
           </Route>
-        </div>
-      </Switch>
-      <Footer />
+        </Switch>
+
+        <Footer />
+      </div>
     </Router>
   );
 }
