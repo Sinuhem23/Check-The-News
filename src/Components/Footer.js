@@ -6,6 +6,16 @@ export default function Footer() {
   return (
     <div className='main_footer_container'>
       <ul>
+        {/* New York Times API */}
+        <li>
+          <button>
+            <a className='footerLinks' href='https://developer.nytimes.com/'>
+              New York Times Api
+            </a>
+          </button>
+        </li>
+
+        {/* Youtube API */}
         <li>
           <button>
             <a
@@ -13,14 +23,6 @@ export default function Footer() {
               href='https://apilist.fun/api/youtube-api'
             >
               Youtube Api
-            </a>
-          </button>
-        </li>
-
-        <li>
-          <button>
-            <a className='footerLinks' href='https://developer.nytimes.com/'>
-              New York Times Api
             </a>
           </button>
         </li>
