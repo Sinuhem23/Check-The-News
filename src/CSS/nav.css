@@ -31,3 +31,7 @@ button:hover {
   font-weight: bold;
   text-decoration: none;
 }
+.location {
+  display: flex;
+  justify-content: space-between;
+}

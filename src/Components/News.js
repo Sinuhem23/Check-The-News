@@ -7,6 +7,7 @@ function News() {
   const context = useContext(ListContext);
   let articles = context.articles;
   let isLoading = context.isLoading;
+  let term = context.term;
 
   return (
     <div className='main_container'>
@@ -24,14 +25,25 @@ function News() {
                   {articles.map((item) => (
                     <li key={item._id}>
                       <div className='newsLi news_info_container'>
-                        <p>{item.subsection_name}</p>
-                        <p>{item.section_name}</p>
+                        <div className='location'>
+                          <p>
+                            {!item.subsection_name ? (
+                              <p>
+                                {term.charAt(0).toUpperCase() + term.slice(1)}
+                              </p>
+                            ) : (
+                              item.subsection_name
+                            )}
+                          </p>
+                          <p>{item.section_name}</p>
+                        </div>
                         <h3 className='news_title'>{item.headline.main}</h3>
                         <p className='news_summary'>{item.snippet}</p>
+                        <p className='author'>{item.byline.original}</p>
                         <a target='_blank' href={item.web_url}>
                           Web Resource
                         </a>
-                        <p className='author'>{item.byline.original}</p>
+
                         <p className='publish_date'>{item.pub_date}</p>
                       </div>
                     </li>

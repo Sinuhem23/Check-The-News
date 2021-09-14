@@ -23,6 +23,8 @@ function App() {
     setIsLoading(false);
   }, [term]);
   console.log(articles);
+  // yyyy-MM-dd
+  // const date_input = articles.pub_date;
 
   return (
     <Router>
