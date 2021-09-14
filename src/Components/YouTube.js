@@ -1,4 +1,5 @@
 import React, { Component, useState, useEffect } from 'react';
+import '../CSS/youtube.css';
 function YouTube() {
   let [data, setData] = useState([]);
 
@@ -11,7 +12,7 @@ function YouTube() {
   return (
     <div className='main_container'>
       <div className='inner_youtube_container'>
-        <div className='youTube'>
+        <div className='youtubePg'>
           <div>
             <h1>YouTube from Country*</h1>
             {data.map((item) => (

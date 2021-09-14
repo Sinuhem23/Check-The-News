@@ -10,3 +10,12 @@
 .search {
   /* margin-top: 2rem; */
 }
+.news {
+  padding: 3rem;
+  text-align: start;
+}
+.youtube {
+  text-align: end;
+
+  padding: 3rem;
+}
