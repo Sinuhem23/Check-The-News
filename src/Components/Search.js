@@ -26,13 +26,13 @@ function Search({ props }) {
           required
         >
           <option value=''>Select a country</option>
-          <option value='Americas'>Americas</option>
-          <option value='Africa'>Africa</option>
-          <option value='MiddleEast'>Middle East</option>
-          <option value='Europe'>Europe</option>
-          <option value='Asia'>Asia</option>
-          <option value='Australia'>Australia</option>
-          <option value='Canada'>Canada</option>
+          <option value='americas'>Americas</option>
+          <option value='africa'>Africa</option>
+          <option value='middleeast'>Middle East</option>
+          <option value='europe'>Europe</option>
+          <option value='asia'>Asia</option>
+          <option value='australia'>Australia</option>
+          <option value='canada'>Canada</option>
         </select>
         <button>Submit</button>
       </form>

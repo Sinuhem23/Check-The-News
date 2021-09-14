@@ -10,24 +10,24 @@ import Search from './Components/Search';
 export const ListContext = createContext();
 function App() {
   const [articles, setArticles] = useState([]);
-  const [term, setTerm] = useState('world');
-  // const [isLoading, setIsLoading] = useState(true);
+  const [term, setTerm] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
-  const API = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${term}&api-key=${process.env.REACT_APP_NEW_YORK_TIMES_API_KEY}`;
+  const API = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=world/${term}&api-key=${process.env.REACT_APP_NEW_YORK_TIMES_API_KEY}`;
 
   useEffect(() => {
     console.log('useEffect runs: API fetch');
     fetch(API)
       .then((response) => response.json())
       .then((result) => setArticles(result.response.docs));
-    // setIsLoading(false);
+    setIsLoading(false);
   }, [term]);
   console.log(articles);
 
   return (
     <Router>
       <div className='App'>
-        <ListContext.Provider value={{ articles, term, setTerm }}>
+        <ListContext.Provider value={{ articles, isLoading, term, setTerm }}>
           <Nav />
 
           <Switch>
