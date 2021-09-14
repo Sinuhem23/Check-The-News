@@ -1,12 +1,17 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { Component, useState, useEffect, useContext } from 'react';
 import '../CSS/search.css';
+import { ListContext } from '../App';
 
-function Search() {
+function Search({ props }) {
   const [text, setText] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let setTerm = context.setTerm;
+    setTerm(text);
   };
+  const context = useContext(ListContext);
+  console.log(context);
 
   return (
     <div className='main_input_container'>
@@ -29,6 +34,7 @@ function Search() {
           <option value='Australia'>Australia</option>
           <option value='Canada'>Canada</option>
         </select>
+        <button>Submit</button>
       </form>
       {/* End of Form */}
     </div>
