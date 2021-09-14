@@ -21,12 +21,13 @@ function News() {
     <div className='main_container'>
       <div className='inner_news_container'>
         <div className='newsPg'>
-          <div>
-            <h1>NY Times from Country* </h1>
+          <div className='newsUl'>
             <ul>
+              <h1>New York Times </h1>
+
               {articles.map((item) => (
                 <li key={item.id}>
-                  <div className='news_info_container'>
+                  <div className='newsLi news_info_container'>
                     <p>{item.subsection_name}</p>
                     <h3 className='news_title'>{item.headline.main}</h3>
                     <p className='news_summary'>{item.snippet}</p>

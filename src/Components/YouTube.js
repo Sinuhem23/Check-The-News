@@ -14,7 +14,7 @@ function YouTube() {
       <div className='inner_youtube_container'>
         <div className='youtubePg'>
           <div>
-            <h1>YouTube from Country*</h1>
+            <h1>YouTube</h1>
             {data.map((item) => (
               <p key={item.id}>{item.title}</p>
             ))}
