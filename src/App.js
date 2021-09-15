@@ -1,30 +1,45 @@
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import React, { Component, useState, useEffect, createContext } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { useState, useEffect, createContext } from 'react';
 import Home from './Components/Home';
 import Nav from './Components/Nav';
 import Footer from './Components/Footer';
 import YouTube from './Components/YouTube';
 import News from './Components/News';
-import Search from './Components/Search';
 export const ListContext = createContext();
 function App() {
+  // NEW YORK TIMES API SECTION ////////////
   const [articles, setArticles] = useState([]);
+  const [youTube, setYouTube] = useState([]);
   const [term, setTerm] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-  const API = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=world/${term}&api-key=${process.env.REACT_APP_NEW_YORK_TIMES_API_KEY}`;
+  const NYT_API = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=world/${term}&api-key=${process.env.REACT_APP_NEW_YORK_TIMES_API_KEY}`;
 
   useEffect(() => {
     console.log('useEffect runs: API fetch');
-    fetch(API)
+    fetch(NYT_API)
       .then((response) => response.json())
       .then((result) => setArticles(result.response.docs));
     setIsLoading(false);
   }, [term]);
   console.log(articles);
-  // yyyy-MM-dd
-  // const date_input = articles.pub_date;
+  // END OF NEW YORK TIMES API SECTION /////////
+
+  // YOUTUBE API SECTION ////////////
+
+  const YT_API = `https://www.googleapis.com/youtube/v3/search?${term}politics/part=snippet&maxResults=25&q=surfing&key=AIzaSyBSUiffO3LGf2Rb5P6s7dNTuvti3K078dc`;
+
+  useEffect(() => {
+    console.log('useEffect runs: API fetch');
+    fetch(YT_API)
+      .then((resp) => resp.json())
+      .then((res) => setYouTube(res));
+    setIsLoading(false);
+  }, [term]);
+  console.log(youTube);
+
+  // END OF YOUTUBE API SECTION //////////
 
   return (
     <Router>

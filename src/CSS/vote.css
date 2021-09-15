@@ -2,11 +2,15 @@
   display: inline-grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+.voting_title {
+  color: rgb(37, 133, 197);
+}
 .countImg {
   height: 4rem;
 }
 .voteBTN {
   box-shadow: 3px 3px 3px 3px rgb(202, 202, 202);
+  cursor: pointer;
 }
 .voteBTN:hover {
   background-color: rgb(226, 71, 71);
