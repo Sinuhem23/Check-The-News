@@ -34,7 +34,7 @@ function Search({}) {
           <option value='australia'>Australia</option>
           <option value='canada'>Canada</option>
         </select>
-        <button>Submit</button>
+        <button className='searchBtn'>Search</button>
       </form>
       {/* End of Form */}
     </div>

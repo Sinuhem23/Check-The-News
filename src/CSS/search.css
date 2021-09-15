@@ -16,3 +16,6 @@
 .search_text {
   margin-top: 6rem;
 }
+.searchBtn {
+  cursor: pointer;
+}

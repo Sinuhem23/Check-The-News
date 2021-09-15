@@ -1,3 +1,26 @@
 .youtubePg {
-  /* padding: 3rem; */
+  background-color: aliceblue;
+  /* border: 1px solid black; */
+  box-shadow: 1px 3px 9px 3px rgb(125, 190, 246);
+
+  padding: 3rem;
+}
+iframe {
+  /* width: '360px';
+  height: '215px'; */
+}
+.iframe_container {
+  display: grid;
+  padding: 10px;
+}
+.youtubeLi {
+  padding: 2rem;
+  background-color: white;
+  outline: 0;
+  text-align: start;
+  box-shadow: 1px 3px 9px 3px rgb(125, 190, 246);
+}
+.youtubeInfo {
+  display: flex;
+  grid-gap: 1rem;
 }
