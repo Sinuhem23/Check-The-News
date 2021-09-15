@@ -1,12 +1,14 @@
 .main_nav_container {
   display: flex;
-  justify-content: flex-end;
+
+  justify-content: space-between;
   background-color: #e7f9ff;
   padding: 1rem;
 
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
 ul {
+  align-self: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -34,4 +36,16 @@ button:hover {
 .location {
   display: flex;
   justify-content: space-between;
+}
+.icon {
+  border-radius: 10px;
+  width: 30%;
+  cursor: pointer;
+}
+.icon:hover {
+  width: 33%;
+}
+.navIconLink {
+  text-align: start;
+  padding: 1rem;
 }

@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/nav.css';
+import Logo from '../Images/icon.jpeg';
 
 export default function Nav() {
   return (
     <div className='main_nav_container'>
+      <Link className='navIconLink' to='/Home'>
+        <img src={Logo} className='icon'></img>
+      </Link>
+
       <ul>
         {/* Home Section */}
         <li>

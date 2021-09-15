@@ -1,0 +1,22 @@
+.voteContainer {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.countImg {
+  height: 4rem;
+}
+.voteBTN {
+  box-shadow: 3px 3px 3px 3px rgb(202, 202, 202);
+}
+.voteBTN:hover {
+  background-color: rgb(226, 71, 71);
+}
+.yes {
+  color: rgb(46, 133, 46);
+}
+.notSure {
+  color: orange;
+}
+.no {
+  color: rgb(214, 23, 16);
+}

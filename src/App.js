@@ -34,9 +34,7 @@ function App() {
 
           <Switch>
             <Route exact path='/'></Route>
-            {/* <Route path='/search'>
-              <Search searchText={(text) => setTerm(text)} />
-            </Route> */}
+
             <Route path='/home'>
               <Home />
             </Route>

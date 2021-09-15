@@ -20,7 +20,7 @@ export default function Footer() {
           <button>
             <a
               className='footerLinks'
-              href='https://apilist.fun/api/youtube-api'
+              href='https://developers.google.com/youtube/?ref=apilist.fun'
             >
               Youtube Api
             </a>

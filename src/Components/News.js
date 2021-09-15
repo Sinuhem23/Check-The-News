@@ -20,7 +20,6 @@ function News() {
               <h1>Loading...</h1>
             ) : (
               <section>
-                {' '}
                 <ul>
                   {articles.map((item) => (
                     <li key={item._id}>

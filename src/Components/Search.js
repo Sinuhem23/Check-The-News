@@ -1,8 +1,8 @@
-import React, { Component, useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import '../CSS/search.css';
 import { ListContext } from '../App';
 
-function Search({ props }) {
+function Search({}) {
   const [text, setText] = useState('');
 
   const handleSubmit = (e) => {
