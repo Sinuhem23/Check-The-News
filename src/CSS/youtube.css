@@ -1,9 +1,12 @@
-.youtubePg {
+.youtubeContainer {
   background-color: aliceblue;
   /* border: 1px solid black; */
   box-shadow: 1px 3px 9px 3px rgb(125, 190, 246);
 
   padding: 3rem;
+}
+.youtubeContainer:hover {
+  background-color: rgb(205, 227, 246);
 }
 .infoTitle {
   color: rgb(236, 47, 47);
@@ -55,4 +58,7 @@
   color: rgb(37, 133, 197);
 
   /* color: rgb(236, 47, 47); */
+}
+.ytDate {
+  font-weight: 500;
 }

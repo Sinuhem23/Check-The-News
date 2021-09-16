@@ -5,6 +5,9 @@
 
   padding: 3rem;
 }
+.news_container:hover {
+  background-color: rgb(205, 227, 246);
+}
 .nytImg {
   height: 30px;
   width: 60px;
@@ -36,6 +39,7 @@
   color: rgb(20, 66, 31);
 }
 .publish_date {
+  font-weight: 500;
 }
 .webLink {
   text-decoration: none;

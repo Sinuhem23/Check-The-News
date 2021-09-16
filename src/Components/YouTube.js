@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import '../CSS/youtube.css';
 import { ListContext } from '../App';
 import ytLogo from '../Images/youtubeSVG.png';
+const moment = require('moment');
 
 function YouTube() {
   const context = useContext(ListContext);
@@ -9,7 +10,7 @@ function YouTube() {
 
   return (
     <div className='main_container'>
-      <div className='youtubePg'>
+      <div className='youtubeContainer'>
         <div>
           <div className='ytLogoContainer'>
             <img className='ytImg' src={ytLogo}></img>
@@ -37,7 +38,12 @@ function YouTube() {
                           {vid.snippet.channelTitle}
                         </h4>
                         <p>{vid.snippet.description}</p>
-                        <p>{vid.snippet.publishedAt}</p>
+                        <p className='ytDate'>
+                          {' '}
+                          {moment(vid.snippet.publishedAt).format(
+                            'dddd, MMMM Do YYYY'
+                          )}
+                        </p>
 
                         <a
                           className='youtubeLink'

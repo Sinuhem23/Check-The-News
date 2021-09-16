@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { ListContext } from '../App';
 import nytLogo from '../Images/NYTimes_svg.png';
 import '../CSS/news.css';
+const moment = require('moment');
 
 function News() {
   const context = useContext(ListContext);
@@ -39,7 +40,9 @@ function News() {
                     <h3 className='news_title'>{item.headline.main}</h3>
                     <p className='news_summary'>{item.snippet}</p>
                     <p className='author'>{item.byline.original}</p>
-                    <p className='publish_date'>{item.pub_date}</p>
+                    <p className='publish_date'>
+                      {moment(item.pub_date).format('dddd, MMMM Do YYYY')}
+                    </p>
 
                     <a className='webLink' target='_blank' href={item.web_url}>
                       Web Resource
