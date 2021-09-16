@@ -11,14 +11,14 @@ function Search({}) {
     setTerm(text);
   };
   const context = useContext(ListContext);
-  console.log(context);
-
+  let themeToggler = context.themeToggler;
   return (
     <div className='main_input_container'>
       <h1 className='search_text'>
         <label htmlFor='search'>Search</label>
       </h1>
       {/* Form */}
+      {/* <div className='search_container'> */}
       <form className='main_input' onSubmit={handleSubmit}>
         <select
           className='select_form'
@@ -34,9 +34,16 @@ function Search({}) {
           <option value='australia'>Australia</option>
           <option value='canada'>Canada</option>
         </select>
-        <button className='searchBtn'>Search</button>
+        <button type='submit' className='searchBtn'>
+          Search
+        </button>
+        <button className='switchThemeBtn' onClick={() => themeToggler()}>
+          Change Theme
+        </button>
       </form>
       {/* End of Form */}
+
+      {/* </div> */}
     </div>
   );
 }

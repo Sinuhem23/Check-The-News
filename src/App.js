@@ -22,7 +22,10 @@ function App() {
     color: ${(props) => props.theme.fontColor};
   `;
   const StyledNavAndFooter = styled.div`
-    body: ${(props) => props.theme.body};
+    navfooter: ${(props) => props.theme.navFooter};
+  `;
+  const StyledNewsYoutube = styled.div`
+    infocontainer: ${(props) => props.theme.infoContainer};
   `;
 
   const themeToggler = () => {
@@ -63,14 +66,18 @@ function App() {
         <Router>
           <div className='App'>
             <ListContext.Provider
-              value={{ articles, youTube, isLoading, term, setTerm }}
+              value={{
+                articles,
+                youTube,
+                isLoading,
+                term,
+                setTerm,
+                themeToggler,
+              }}
             >
               <StyledNavAndFooter>
                 <Nav />
               </StyledNavAndFooter>
-              <button className='switchThemeBtn' onClick={() => themeToggler()}>
-                Change Theme
-              </button>
 
               <Switch>
                 <Route exact path='/'>
@@ -81,15 +88,21 @@ function App() {
                   <Home />
                 </Route>
                 <Route path='/news'>
-                  <News />
+                  <StyledNewsYoutube>
+                    <News />
+                  </StyledNewsYoutube>
                 </Route>
                 <Route path='/youtube'>
-                  <YouTube />
+                  <StyledNewsYoutube>
+                    <YouTube />
+                  </StyledNewsYoutube>
                 </Route>
               </Switch>
             </ListContext.Provider>
 
-            <Footer />
+            <StyledNavAndFooter>
+              <Footer />
+            </StyledNavAndFooter>
           </div>
         </Router>
       </StyledApp>

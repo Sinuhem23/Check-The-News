@@ -4,9 +4,10 @@
 }
 .main_input {
   display: grid;
-  grid-template-columns: 3fr 0.5fr;
+  grid-template-columns: 6fr 0.25fr 1fr;
   grid-gap: 0.5rem;
   margin: 3rem 18rem 6rem 18rem;
+  align-items: center;
 }
 .select_form {
   padding: 9px;
@@ -18,4 +19,11 @@
 }
 .searchBtn {
   cursor: pointer;
+}
+.search_container {
+  display: flex;
+}
+.switchThemeBtn {
+  align-items: center;
+  width: max-content;
 }
