@@ -32,7 +32,7 @@ function YouTube() {
                         <p>{vid.snippet.description}</p>
                         <a
                           target='_blank'
-                          href={vid.snippet.thumbnails.default.url}
+                          href={`https://www.youtube.com/watch?v=${vid.id.videoId}`}
                         >
                           Youtube Link
                         </a>
