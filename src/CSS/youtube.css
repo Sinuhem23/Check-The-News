@@ -5,20 +5,33 @@
 
   padding: 3rem;
 }
-iframe {
-  /* width: '360px';
-  height: '215px'; */
+.infoTitle {
+  color: rgb(236, 47, 47);
+}
+.ytImg {
+  height: 30px;
+  width: 60px;
+  margin-right: 1rem;
 }
 .iframe_container {
   display: grid;
   padding: 10px;
 }
+
 .youtubeLi {
   padding: 2rem;
   background-color: white;
   outline: 0;
   text-align: start;
   box-shadow: 1px 3px 9px 3px rgb(125, 190, 246);
+}
+.ytLogoContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+.youtubeLi:hover {
+  border: 3px solid rgb(236, 47, 47);
 }
 .youtubeInfo {
   display: flex;

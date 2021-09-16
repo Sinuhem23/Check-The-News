@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import '../CSS/youtube.css';
 import { ListContext } from '../App';
+import ytLogo from '../Images/youtubeSVG.png';
 
 function YouTube() {
   const context = useContext(ListContext);
@@ -10,7 +11,11 @@ function YouTube() {
     <div className='main_container'>
       <div className='youtubePg'>
         <div>
-          <h1>YouTube</h1>
+          <div className=''>
+            <img className='ytImg' src={ytLogo}></img>
+            <h1 className='infoTitle'>YouTube</h1>
+          </div>
+
           <ul>
             {youTube.map((vid, idx) => (
               <div className='iframe_container'>

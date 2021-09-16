@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ListContext } from '../App';
-
+import nytLogo from '../Images/NYTimes_svg.png';
 import '../CSS/news.css';
 
 function News() {
@@ -12,7 +12,11 @@ function News() {
   return (
     <div className='main_container'>
       <div className='news_container'>
-        <h1>New York Times </h1>
+        <div className='nytLogoContainer'>
+          <h1>
+            <img className='nytImg' src={nytLogo}></img>New York Times{' '}
+          </h1>
+        </div>
 
         {isLoading ? (
           <h1>Loading...</h1>
@@ -23,19 +27,19 @@ function News() {
                 <li key={item._id}>
                   <div className='newsLi '>
                     <div className='location'>
-                      <p>
+                      <p className='section_name'>
                         {!item.subsection_name ? (
                           <p>{term.charAt(0).toUpperCase() + term.slice(1)}</p>
                         ) : (
                           item.subsection_name
                         )}
                       </p>
-                      <p>{item.section_name}</p>
+                      <p className='section_name'>{item.section_name}</p>
                     </div>
                     <h3 className='news_title'>{item.headline.main}</h3>
                     <p className='news_summary'>{item.snippet}</p>
                     <p className='author'>{item.byline.original}</p>
-                    <a target='_blank' href={item.web_url}>
+                    <a className='web' target='_blank' href={item.web_url}>
                       Web Resource
                     </a>
 

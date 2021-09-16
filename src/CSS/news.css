@@ -5,12 +5,40 @@
 
   padding: 3rem;
 }
+.nytImg {
+  height: 30px;
+  width: 60px;
+  margin-right: 1rem;
+}
+.nytLogoContainer {
+  display: flex;
+}
 .newsLi {
   padding: 1.73rem;
   background-color: white;
   outline: 0;
   box-shadow: 1px 3px 9px 3px rgb(125, 190, 246);
 }
+
 .newsLi:hover {
   border: 3px solid rgb(73, 126, 187);
+}
+.news_title {
+  color: rgb(37, 133, 197);
+}
+.location {
+  font-weight: bold;
+}
+.author {
+  font-weight: bold;
+  color: rgb(20, 66, 31);
+}
+.publish_date {
+}
+.web {
+  text-decoration: none;
+  color: orangered;
+}
+.section_name {
+  color: rgb(20, 66, 31);
 }

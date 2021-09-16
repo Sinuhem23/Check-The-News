@@ -2,6 +2,7 @@
   display: grid;
 }
 .inner_container {
+  background-color: rgb(250, 250, 245);
   display: grid;
   padding-bottom: 3rem;
   justify-items: center;

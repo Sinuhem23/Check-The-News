@@ -28,7 +28,7 @@ function App() {
 
   // YOUTUBE API SECTION ////////////
 
-  const YT_API = `https://www.googleapis.com/youtube/v3/search?&part=snippet&maxResults=10&q=${term}+politics&key=AIzaSyBSUiffO3LGf2Rb5P6s7dNTuvti3K078dc`;
+  const YT_API = `https://www.googleapis.com/youtube/v3/search?&part=snippet&maxResults=10&q=${term}+politics&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`;
 
   useEffect(() => {
     console.log('useEffect runs: API fetch');
