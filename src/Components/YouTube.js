@@ -11,7 +11,7 @@ function YouTube() {
     <div className='main_container'>
       <div className='youtubePg'>
         <div>
-          <div className=''>
+          <div className='ytLogoContainer'>
             <img className='ytImg' src={ytLogo}></img>
             <h1 className='infoTitle'>YouTube</h1>
           </div>
@@ -21,7 +21,7 @@ function YouTube() {
               <div className='iframe_container'>
                 <li key={idx}>
                   <div className='youtubeLi'>
-                    <h3>{vid.snippet.title}</h3>
+                    <h3 className='ytTitle'>{vid.snippet.title}</h3>
                     <div className='youtubeInfo'>
                       <iframe
                         width='360'
@@ -33,9 +33,14 @@ function YouTube() {
                         allowfullscreen
                       ></iframe>
                       <div>
-                        <h5>{vid.snippet.channelTitle}</h5>
+                        <h4 className='channelTitle'>
+                          {vid.snippet.channelTitle}
+                        </h4>
                         <p>{vid.snippet.description}</p>
+                        <p>{vid.snippet.publishedAt}</p>
+
                         <a
+                          className='youtubeLink'
                           target='_blank'
                           href={`https://www.youtube.com/watch?v=${vid.id.videoId}`}
                         >

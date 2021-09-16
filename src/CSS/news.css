@@ -12,6 +12,8 @@
 }
 .nytLogoContainer {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .newsLi {
   padding: 1.73rem;
@@ -35,9 +37,13 @@
 }
 .publish_date {
 }
-.web {
+.webLink {
   text-decoration: none;
   color: orangered;
+  font-weight: bold;
+}
+.webLink:hover {
+  color: rgb(138, 7, 7);
 }
 .section_name {
   color: rgb(20, 66, 31);

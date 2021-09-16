@@ -39,11 +39,11 @@ function News() {
                     <h3 className='news_title'>{item.headline.main}</h3>
                     <p className='news_summary'>{item.snippet}</p>
                     <p className='author'>{item.byline.original}</p>
-                    <a className='web' target='_blank' href={item.web_url}>
+                    <p className='publish_date'>{item.pub_date}</p>
+
+                    <a className='webLink' target='_blank' href={item.web_url}>
                       Web Resource
                     </a>
-
-                    <p className='publish_date'>{item.pub_date}</p>
                   </div>
                 </li>
               ))}
