@@ -20,7 +20,7 @@ function News() {
         </div>
 
         {isLoading ? (
-          <h1>Loading...</h1>
+          <p>Loading...</p>
         ) : (
           <section>
             <ul>
