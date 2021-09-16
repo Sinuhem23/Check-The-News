@@ -10,11 +10,13 @@
 }
 
 .news {
+  margin: 0 6rem;
+
   padding: 1rem;
   text-align: start;
 }
 .youtube {
   text-align: end;
-
+  margin: 0 6rem;
   padding: 1rem;
 }

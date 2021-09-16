@@ -50,7 +50,9 @@ function App() {
           <Nav />
 
           <Switch>
-            <Route exact path='/'></Route>
+            <Route exact path='/'>
+              <Home />
+            </Route>
 
             <Route path='/home'>
               <Home />
