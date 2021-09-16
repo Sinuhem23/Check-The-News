@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import '../CSS/youtube.css';
 import { ListContext } from '../App';
 import ytLogo from '../Images/youtubeSVG.png';
+
 const moment = require('moment');
 
 function YouTube() {
@@ -18,7 +19,7 @@ function YouTube() {
             <h1 className='infoTitle'>YouTube</h1>
           </div>
 
-          {isLoading ? (
+          {/* {isLoading ? (
             <p>Loading...</p>
           ) : (
             <ul>
@@ -63,7 +64,7 @@ function YouTube() {
                 </div>
               ))}
             </ul>
-          )}
+          )} */}
         </div>
       </div>
     </div>

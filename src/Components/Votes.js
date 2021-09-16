@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Yes from '../Images/Yes.jpg';
 import NotSure from '../Images/NotSure.jpg';
 import No from '../Images/No.jpg';
 import '../CSS/vote.css';
+import useLocalStorage from '../Hooks/useLocalStorage';
 
 function Votes() {
-  const [yesCount, setyesCount] = useState(0);
-  const [notSureCount, setNotSureCount] = useState(0);
-  const [noCount, setNoCount] = useState(0);
+  const [yesCount, setyesCount] = useLocalStorage('yes', 0);
+  const [notSureCount, setNotSureCount] = useLocalStorage('notsure', 0);
+  const [noCount, setNoCount] = useLocalStorage('no', 0);
+  // useEffect(() => {
+  //   // storing input name
+  //   localStorage.setItem('yesCount', JSON.stringify(yesCount));
+  //   localStorage.setItem('notSureCount', JSON.stringify(notSureCount));
+  //   localStorage.setItem('noCount', JSON.stringify(noCount));
+  // }, [yesCount, notSureCount, noCount]);
+
   return (
     <div>
       <h3 className='voting_title'>Would you say the news are accurate?</h3>

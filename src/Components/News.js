@@ -19,7 +19,7 @@ function News() {
           </h1>
         </div>
 
-        {isLoading ? (
+        {/* {isLoading ? (
           <p>Loading...</p>
         ) : (
           <section>
@@ -52,7 +52,7 @@ function News() {
               ))}
             </ul>
           </section>
-        )}
+        )} */}
       </div>
     </div>
   );
