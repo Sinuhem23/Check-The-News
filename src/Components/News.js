@@ -14,12 +14,12 @@ function News() {
     <div className='main_container'>
       <div className='news_container'>
         <div className='nytLogoContainer'>
-          <h1>
-            <img className='nytImg' src={nytLogo}></img>New York Times{' '}
+          <h1 className='infoMainTitle'>
+            <img className='nytImg' src={nytLogo}></img> New York Times{' '}
           </h1>
         </div>
 
-        {/* {isLoading ? (
+        {isLoading ? (
           <p>Loading...</p>
         ) : (
           <section>
@@ -52,7 +52,7 @@ function News() {
               ))}
             </ul>
           </section>
-        )} */}
+        )}
       </div>
     </div>
   );

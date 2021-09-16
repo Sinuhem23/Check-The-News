@@ -13,6 +13,9 @@
   width: 60px;
   margin-right: 1rem;
 }
+.infoMainTitle {
+  color: black;
+}
 .nytLogoContainer {
   display: flex;
   align-items: center;
@@ -51,4 +54,7 @@
 }
 .section_name {
   color: rgb(20, 66, 31);
+}
+.news_summary {
+  color: black;
 }
