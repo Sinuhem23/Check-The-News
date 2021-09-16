@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Sinuhem23/Check-The-News.git/static/css/main.168377bb.chunk.css",
+    "main.js": "/Sinuhem23/Check-The-News.git/static/js/main.5d5e1e6a.chunk.js",
+    "main.js.map": "/Sinuhem23/Check-The-News.git/static/js/main.5d5e1e6a.chunk.js.map",
+    "runtime-main.js": "/Sinuhem23/Check-The-News.git/static/js/runtime-main.938f7b3b.js",
+    "runtime-main.js.map": "/Sinuhem23/Check-The-News.git/static/js/runtime-main.938f7b3b.js.map",
+    "static/js/2.51852e7c.chunk.js": "/Sinuhem23/Check-The-News.git/static/js/2.51852e7c.chunk.js",
+    "static/js/2.51852e7c.chunk.js.map": "/Sinuhem23/Check-The-News.git/static/js/2.51852e7c.chunk.js.map",
+    "index.html": "/Sinuhem23/Check-The-News.git/index.html",
+    "static/css/main.168377bb.chunk.css.map": "/Sinuhem23/Check-The-News.git/static/css/main.168377bb.chunk.css.map",
+    "static/js/2.51852e7c.chunk.js.LICENSE.txt": "/Sinuhem23/Check-The-News.git/static/js/2.51852e7c.chunk.js.LICENSE.txt",
+    "static/media/NYTimes_svg.e178f9ee.png": "/Sinuhem23/Check-The-News.git/static/media/NYTimes_svg.e178f9ee.png",
+    "static/media/No.fc5939e7.jpg": "/Sinuhem23/Check-The-News.git/static/media/No.fc5939e7.jpg",
+    "static/media/NotSure.e3c02730.jpg": "/Sinuhem23/Check-The-News.git/static/media/NotSure.e3c02730.jpg",
+    "static/media/Yes.c293dcff.jpg": "/Sinuhem23/Check-The-News.git/static/media/Yes.c293dcff.jpg",
+    "static/media/icon.da2cc551.jpeg": "/Sinuhem23/Check-The-News.git/static/media/icon.da2cc551.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.938f7b3b.js",
+    "static/js/2.51852e7c.chunk.js",
+    "static/css/main.168377bb.chunk.css",
+    "static/js/main.5d5e1e6a.chunk.js"
+  ]
+}
