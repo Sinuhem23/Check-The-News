@@ -6,6 +6,8 @@ import Nav from './Components/Nav';
 import Footer from './Components/Footer';
 import YouTube from './Components/YouTube';
 import News from './Components/News';
+import useLocalStorage from './Hooks/useLocalStorage';
+
 import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme, GlobalStyles } from './Components/Theme';
 
@@ -17,7 +19,7 @@ function App() {
   const [term, setTerm] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useLocalStorage('light');
   const StyledApp = styled.div`
     color: ${(props) => props.theme.fontColor};
   `;

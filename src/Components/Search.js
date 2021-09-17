@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react';
+
 import '../CSS/search.css';
+
 import { ListContext } from '../App';
 
 function Search({}) {
@@ -12,6 +14,7 @@ function Search({}) {
   };
   const context = useContext(ListContext);
   let themeToggler = context.themeToggler;
+  const label = { inputProps: { 'aria-label': 'Switch demo' } };
   return (
     <div className='main_input_container'>
       <h1 className='search_text'>
