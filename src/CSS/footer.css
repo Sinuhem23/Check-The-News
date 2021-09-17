@@ -1,7 +1,7 @@
 .main_footer_container {
   display: flex;
   justify-content: center;
-  background-color: rgb(91, 91, 91);
+  background-color: #e7f9ff;
   padding: 2rem;
 }
 ul {
