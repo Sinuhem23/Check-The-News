@@ -17,3 +17,15 @@
   text-align: end;
   padding: 1rem;
 }
+.leaveCommentLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cLink {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: rgb(37, 133, 197);
+  font-weight: bold;
+  font-size: 20px;
+}

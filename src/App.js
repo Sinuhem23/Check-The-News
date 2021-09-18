@@ -6,6 +6,7 @@ import Nav from './Components/Nav';
 import Footer from './Components/Footer';
 import YouTube from './Components/YouTube';
 import News from './Components/News';
+import Comments from './Components/Comments';
 import useLocalStorage from './Hooks/useLocalStorage';
 
 import styled, { ThemeProvider } from 'styled-components';
@@ -98,6 +99,9 @@ function App() {
                   <StyledNewsYoutube>
                     <YouTube />
                   </StyledNewsYoutube>
+                </Route>
+                <Route path='/comments'>
+                  <Comments />
                 </Route>
               </Switch>
             </ListContext.Provider>
