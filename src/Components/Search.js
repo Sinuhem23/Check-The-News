@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-
 import '../CSS/search.css';
 
 import { ListContext } from '../App';
@@ -7,14 +6,18 @@ import { ListContext } from '../App';
 function Search({}) {
   const [text, setText] = useState('');
 
+  const context = useContext(ListContext);
+  let themeToggler = context.themeToggler;
+  let term = context.term;
+
   const handleSubmit = (e) => {
     e.preventDefault();
     let setTerm = context.setTerm;
     setTerm(text);
+
+    console.log('im HERE' + term);
   };
-  const context = useContext(ListContext);
-  let themeToggler = context.themeToggler;
-  const label = { inputProps: { 'aria-label': 'Switch demo' } };
+
   return (
     <div className='main_input_container'>
       <h1 className='search_text'>
@@ -29,13 +32,13 @@ function Search({}) {
           required
         >
           <option value=''>Select a country</option>
-          <option value='americas'>Americas</option>
-          <option value='africa'>Africa</option>
-          <option value='middleeast'>Middle East</option>
-          <option value='europe'>Europe</option>
-          <option value='asia'>Asia</option>
-          <option value='australia'>Australia</option>
-          <option value='canada'>Canada</option>
+          <option value='Americas'>Americas</option>
+          <option value='Africa'>Africa</option>
+          <option value='Middle East'>Middle East</option>
+          <option value='Europe'>Europe</option>
+          <option value='Asia'>Asia</option>
+          <option value='Australia'>Australia</option>
+          <option value='Canada'>Canada</option>
         </select>
         <button type='submit' className='searchBtn'>
           Search
@@ -45,7 +48,15 @@ function Search({}) {
         </button>
       </form>
       {/* End of Form */}
-
+      {term ? (
+        <div className='termDisplay'>
+          <h1 className='termDisplayTerm'>{term}</h1>
+        </div>
+      ) : (
+        <div className='termDisplay'>
+          <h1 className='termDisplayTerm'>All</h1>
+        </div>
+      )}
       {/* </div> */}
     </div>
   );

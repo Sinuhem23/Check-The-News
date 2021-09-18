@@ -42,7 +42,9 @@ function YouTube() {
                           <h4 className='channelTitle'>
                             {vid.snippet.channelTitle}
                           </h4>
-                          <p>{vid.snippet.description}</p>
+                          <p className='ytDescription'>
+                            {vid.snippet.description}
+                          </p>
                           <p className='ytDate'>
                             {' '}
                             {moment(vid.snippet.publishedAt).format(

@@ -1,8 +1,10 @@
 .voteContainer {
   display: inline-grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 1rem;
 }
 .voting_title {
+  margin: 0 0 30px 0;
   color: rgb(37, 133, 197);
 }
 .countImg {
