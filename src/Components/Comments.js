@@ -4,7 +4,6 @@ import '../CSS/comments.css';
 export class Comments extends Component {
   state = {
     comments: [],
-
     thankYouMessage: '',
   };
   handleChange = (e) => {
@@ -13,7 +12,7 @@ export class Comments extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-
+    // Pushing the user input to sate.comments array
     this.state.comments.push({
       id: this.state.comments.length,
       comment: this.state.comment,
@@ -33,6 +32,7 @@ export class Comments extends Component {
     return () => clearTimeout(timer);
   };
 
+  // Delete Function
   delete = (id) => {
     this.setState({
       comments: this.state.comments.filter((comment) => {
@@ -55,8 +55,8 @@ export class Comments extends Component {
         <h1 className='comment_title'>Comments</h1>
         <div className='all_comment__container'>
           {/* Form Container */}
-
           <div className='form_container'>
+            {/* Form */}
             <form id='input_form' onSubmit={this.handleSubmit}>
               <label htmlFor='comment'>Leave a comment </label>
               <textarea
@@ -70,6 +70,7 @@ export class Comments extends Component {
                 Submit
               </button>
             </form>
+            {/* End of Form */}
           </div>
 
           {/* Display List Container */}
@@ -79,13 +80,14 @@ export class Comments extends Component {
               <h3 className='thankYou'>{this.state.thankYouMessage}</h3>
             </div>
             {/* Map to iterate array */}
-            <div className='ol_info'>
+            <div className='comment_outter_container'>
+              {/* Mapping thought state.comments */}
               {this.state.comments.map((mess, idx) => (
-                <div className='cLi' key={idx}>
+                <div className='comment_inner_container' key={idx}>
                   <div type='text' className='comment_display_container'>
                     <p className='messComment'> {' ' + mess.comment + ' '}</p>
                   </div>
-
+                  {/* Delete button */}
                   <button
                     className='removeBtn'
                     onClick={() => this.delete(idx)}

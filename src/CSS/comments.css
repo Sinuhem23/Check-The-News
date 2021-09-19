@@ -1,8 +1,8 @@
-.ol_info {
+.comment_outter_container {
   /* display: grid; */
-  padding: 1rem;
+  padding: 1rem 1rem 3rem 1rem;
 }
-.cLi {
+.comment_inner_container {
   align-items: center;
   justify-content: center;
   display: grid;
