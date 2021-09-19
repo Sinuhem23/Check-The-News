@@ -9,7 +9,7 @@
   margin: 1rem 0;
   grid-template-columns: 2fr 1fr;
   font-weight: bold;
-  color: rgb(37, 133, 197);
+  /* color: rgb(37, 133, 197); */
 }
 /* Input */
 #comment {
@@ -27,17 +27,28 @@
 }
 .commentBtn {
   margin-top: 1rem;
+  font-weight: bold;
 }
 label {
   font-weight: bold;
 }
 .messComment {
   text-align: start;
-  color: black;
+  /* color: orangered; */
 }
 .removeBtn {
   margin-left: 1rem;
   width: 6rem;
+  font-weight: bold;
 }
 .comment_display_container {
+  /* background-color: cadetblue;
+  border-radius: 4px; */
+
+  padding: 1rem;
+  margin-left: 30%;
+  margin-right: 5%;
+}
+.thankYou {
+  padding: 3rem;
 }

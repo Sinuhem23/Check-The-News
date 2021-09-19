@@ -21,6 +21,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   const [theme, setTheme] = useLocalStorage('light');
+
+  // Styled Components
   const StyledApp = styled.div`
     color: ${(props) => props.theme.fontColor};
   `;

@@ -43,6 +43,7 @@ body {
   background-color: ${(props) => props.theme.infoContainerHover};
 
 }
+
  
 
 `;

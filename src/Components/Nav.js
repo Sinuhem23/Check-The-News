@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <div className='main_nav_container'>
       <Link className='navIconLink' to='/Home'>
-        <img src={Logo} className='icon'></img>
+        <img alt='icon' src={Logo} className='icon'></img>
       </Link>
 
       <ul>

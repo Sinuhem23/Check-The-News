@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import '../CSS/comments.css';
-/*  
-Conditionally render the grocery items based on whether or not they were purchased (ok to have hard coded values for isPurchased)
-Add some style to your app
-*/
+
 export class Comments extends Component {
   state = {
     comments: [],
@@ -26,8 +23,14 @@ export class Comments extends Component {
       comment: '',
       thankYouMessage: 'Thanks for leaving a comment!',
     });
-    console.log(this.state.comments);
-    // });
+    // Setting a timer for the Thank You message
+    const timer = setTimeout(() => {
+      console.log('This will run after 3 second!');
+      this.setState({
+        thankYouMessage: '',
+      });
+    }, 3000);
+    return () => clearTimeout(timer);
   };
 
   delete = (id) => {
@@ -72,8 +75,10 @@ export class Comments extends Component {
           {/* Display List Container */}
           <div className='display_list_container'>
             <h2 className='container_title'>All Comments</h2>
-
-            {/* Map to iterate */}
+            <div className='message_container'>
+              <h3 className='thankYou'>{this.state.thankYouMessage}</h3>
+            </div>
+            {/* Map to iterate array */}
             <div className='ol_info'>
               {this.state.comments.map((mess, idx) => (
                 <div className='cLi' key={idx}>
@@ -90,10 +95,6 @@ export class Comments extends Component {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className='message_container'>
-            <h3 className='thankYou'>{this.state.thankYouMessage}</h3>
           </div>
         </div>
       </div>

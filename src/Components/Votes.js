@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Yes from '../Images/Yes.jpg';
 import NotSure from '../Images/NotSure.jpg';
 import No from '../Images/No.jpg';
@@ -24,7 +25,7 @@ function Votes() {
           <h4 className='yes'>Yes</h4>
 
           <button className='voteBTN' onClick={() => setyesCount(yesCount + 1)}>
-            <img className='countImg' src={Yes}></img>
+            <img className='countImg' src={Yes} alt='Yes '></img>
           </button>
           {/* Show Yes Count */}
           <h4>{yesCount}</h4>
@@ -36,7 +37,7 @@ function Votes() {
             className='voteBTN'
             onClick={() => setNotSureCount(notSureCount + 1)}
           >
-            <img className='countImg' src={NotSure}></img>
+            <img className='countImg' src={NotSure} alt='NotSure '></img>
           </button>
 
           {/* Show Not Sure Count */}
@@ -46,7 +47,7 @@ function Votes() {
           <h4 className='no'>No</h4>
 
           <button className='voteBTN' onClick={() => setNoCount(noCount + 1)}>
-            <img className='countImg' src={No}></img>
+            <img className='countImg' src={No} alt='No '></img>
           </button>
 
           {/* Show No Count */}

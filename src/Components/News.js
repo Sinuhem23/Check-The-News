@@ -15,7 +15,7 @@ function News() {
       <div className='news_container'>
         <div className='nytLogoContainer'>
           <h1 className='infoMainTitle'>
-            <img className='nytImg' src={nytLogo}></img> New York Times{' '}
+            <img className='nytImg' src={nytLogo} alt='ny'></img> New York Times{' '}
           </h1>
         </div>
 
@@ -44,7 +44,12 @@ function News() {
                       {moment(item.pub_date).format('dddd, MMMM Do YYYY')}
                     </p>
 
-                    <a className='webLink' target='_blank' href={item.web_url}>
+                    <a
+                      className='webLink'
+                      rel='noreferrer'
+                      target='_blank'
+                      href={item.web_url}
+                    >
                       Web Resource
                     </a>
                   </div>
