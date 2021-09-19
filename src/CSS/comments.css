@@ -1,0 +1,43 @@
+.ol_info {
+  /* display: grid; */
+  padding: 1rem;
+}
+.cLi {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  margin: 1rem 0;
+  grid-template-columns: 2fr 1fr;
+  font-weight: bold;
+  color: rgb(37, 133, 197);
+}
+/* Input */
+#comment {
+  display: grid;
+  align-self: center;
+  text-decoration: none;
+  padding: 3rem;
+  outline: 0;
+
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+#input_form {
+  display: inline-grid;
+}
+.commentBtn {
+  margin-top: 1rem;
+}
+label {
+  font-weight: bold;
+}
+.messComment {
+  text-align: start;
+  color: black;
+}
+.removeBtn {
+  margin-left: 1rem;
+  width: 6rem;
+}
+.comment_display_container {
+}

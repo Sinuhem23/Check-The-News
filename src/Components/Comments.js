@@ -20,11 +20,11 @@ export class Comments extends Component {
     this.state.comments.push({
       id: this.state.comments.length,
       comment: this.state.comment,
-      thankYouMessage: 'Thanks for leaving a comment!',
     });
     this.setState({
       id: '',
       comment: '',
+      thankYouMessage: 'Thanks for leaving a comment!',
     });
     console.log(this.state.comments);
     // });
@@ -55,15 +55,15 @@ export class Comments extends Component {
 
           <div className='form_container'>
             <form id='input_form' onSubmit={this.handleSubmit}>
-              <label htmlFor='comment'>Leave a comment</label>
-              <input
+              <label htmlFor='comment'>Leave a comment </label>
+              <textarea
                 id='comment'
                 onChange={this.handleChange}
                 value={this.state.comment}
-                type='text-area'
+                type='text'
                 required
-              />
-              <button type='submit' value='Submit'>
+              ></textarea>
+              <button className='commentBtn' type='submit' value='Submit'>
                 Submit
               </button>
             </form>
@@ -74,18 +74,24 @@ export class Comments extends Component {
             <h2 className='container_title'>All Comments</h2>
 
             {/* Map to iterate */}
-            <div>
-              <ol className='ol_info'>
-                {this.state.comments.map((mess, idx) => (
-                  <li key={idx}>
-                    Comments: {' ' + mess.comment + ' '}
-                    <button onClick={() => this.delete(idx)}>Remove</button>
-                  </li>
-                ))}
-              </ol>
+            <div className='ol_info'>
+              {this.state.comments.map((mess, idx) => (
+                <div className='cLi' key={idx}>
+                  <div type='text' className='comment_display_container'>
+                    <p className='messComment'> {' ' + mess.comment + ' '}</p>
+                  </div>
+
+                  <button
+                    className='removeBtn'
+                    onClick={() => this.delete(idx)}
+                  >
+                    Remove
+                  </button>
+                </div>
+              ))}
             </div>
           </div>
-          {/* Checkout Container */}
+
           <div className='message_container'>
             <h3 className='thankYou'>{this.state.thankYouMessage}</h3>
           </div>
