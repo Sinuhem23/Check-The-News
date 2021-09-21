@@ -43,7 +43,7 @@ function App() {
     console.log('useEffect runs: API fetch');
     fetch(NYT_API)
       .then((response) => response.json())
-      .then((result) => setArticles(result.response.docs));
+      .then((result) => setArticles(result.response.docs || []));
     setIsLoading(false);
   }, [term, isLoading, NYT_API]);
   console.log(articles);
@@ -57,7 +57,7 @@ function App() {
     console.log('useEffect runs: API fetch');
     fetch(YT_API)
       .then((resp) => resp.json())
-      .then((res) => setYouTube(res.items));
+      .then((res) => setYouTube(res.items || []));
     setIsLoading(false);
   }, [term, isLoading, YT_API]);
   console.log(youTube);
