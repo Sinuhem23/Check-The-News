@@ -45,7 +45,7 @@ function App() {
       .then((response) => response.json())
       .then((result) => setArticles(result.response.docs));
     setIsLoading(false);
-  }, [term, isLoading]);
+  }, [term, isLoading, NYT_API]);
   console.log(articles);
   // END OF NEW YORK TIMES API SECTION /////////
 
@@ -59,7 +59,7 @@ function App() {
       .then((resp) => resp.json())
       .then((res) => setYouTube(res.items));
     setIsLoading(false);
-  }, [term, isLoading]);
+  }, [term, isLoading, YT_API]);
   console.log(youTube);
 
   // END OF YOUTUBE API SECTION //////////
