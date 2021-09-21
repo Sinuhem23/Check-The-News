@@ -3,7 +3,7 @@ import '../CSS/search.css';
 
 import { ListContext } from '../App';
 
-function Search({}) {
+function Search() {
   const [text, setText] = useState('');
 
   const context = useContext(ListContext);
@@ -14,8 +14,7 @@ function Search({}) {
     e.preventDefault();
     let setTerm = context.setTerm;
     setTerm(text);
-
-    console.log('im HERE' + term);
+    // console.log('im HERE' + term);
   };
 
   return (

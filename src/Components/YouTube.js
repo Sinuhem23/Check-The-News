@@ -15,7 +15,7 @@ function YouTube() {
       <div className='youtubeContainer'>
         <div>
           <div className='ytLogoContainer'>
-            <img className='ytImg' src={ytLogo}></img>
+            <img className='ytImg' alt='Logo' src={ytLogo}></img>
             <h1 className='infoTitle'>YouTube</h1>
           </div>
 
@@ -55,6 +55,7 @@ function YouTube() {
                           <a
                             className='youtubeLink'
                             target='_blank'
+                            rel='noreferrer'
                             href={`https://www.youtube.com/watch?v=${vid.id.videoId}`}
                           >
                             Youtube Link
