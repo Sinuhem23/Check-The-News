@@ -19,7 +19,7 @@ function YouTube() {
             <h1 className='infoTitle'>YouTube</h1>
           </div>
 
-          {/* {isLoading ? (
+          {isLoading ? (
             <p>Loading...</p>
           ) : (
             <ul>
@@ -66,7 +66,7 @@ function YouTube() {
                 </div>
               ))}
             </ul>
-          )} */}
+          )}
         </div>
       </div>
     </div>
