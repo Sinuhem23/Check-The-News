@@ -2,3 +2,6 @@
   text-align: center;
   display: grid;
 }
+body {
+  font-family: 'Zilla Slab', serif;
+}
